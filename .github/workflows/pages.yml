@@ -29,6 +29,7 @@ jobs:
 
       - name: Install Node & Yarn Dependencies
         run: |
+          mkdir -p _assets/yarn
           yarn install --modules-folder _assets/yarn
 
       - name: Install Ruby Dependencies
