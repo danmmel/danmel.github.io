@@ -27,7 +27,11 @@ jobs:
           ruby-version: '2.7'
           bundler-cache: true
 
-      - name: Install Dependencies
+      - name: Install Node & Yarn Dependencies
+        run: |
+          yarn install
+
+      - name: Install Ruby Dependencies
         run: |
           gem install bundler -v '< 2.5'
           bundle install
