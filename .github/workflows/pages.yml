@@ -27,11 +27,15 @@ jobs:
           ruby-version: '2.7'
           bundler-cache: true
 
-      - name: Download missing frontend assets directly
+      - name: Download all missing frontend vendor assets
         run: |
-          mkdir -p _assets/javascripts/retinajs/dist
-          curl -sSL https://cdn.jsdelivr.net/npm/zooming@2.1.1/build/zooming.min.js -o _assets/javascripts/zooming.min.js
-          curl -sSL https://cdn.jsdelivr.net/npm/retinajs@2.1.5/dist/retina.min.js -o _assets/javascripts/retinajs/dist/retina.js
+          mkdir -p _assets/yarn/zooming/build
+          mkdir -p _assets/yarn/retinajs/dist
+          mkdir -p _assets/yarn/svgxuse
+
+          curl -sSL https://cdn.jsdelivr.net/npm/zooming@2.1.1/build/zooming.min.js -o _assets/yarn/zooming/build/zooming.min.js
+          curl -sSL https://cdn.jsdelivr.net/npm/retinajs@2.1.5/dist/retina.js -o _assets/yarn/retinajs/dist/retina.js
+          curl -sSL https://cdn.jsdelivr.net/npm/svgxuse@1.2.6/svgxuse.js -o _assets/yarn/svgxuse/svgxuse.js
 
       - name: Install Ruby Dependencies
         run: |
