@@ -27,10 +27,11 @@ jobs:
           ruby-version: '2.7'
           bundler-cache: true
 
-      - name: Download zooming.min.js directly to javascripts
+      - name: Download missing frontend assets directly
         run: |
-          mkdir -p _assets/javascripts
+          mkdir -p _assets/javascripts/retinajs/dist
           curl -sSL https://cdn.jsdelivr.net/npm/zooming@2.1.1/build/zooming.min.js -o _assets/javascripts/zooming.min.js
+          curl -sSL https://cdn.jsdelivr.net/npm/retinajs@2.1.5/dist/retina.min.js -o _assets/javascripts/retinajs/dist/retina.js
 
       - name: Install Ruby Dependencies
         run: |
