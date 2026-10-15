@@ -24,12 +24,12 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '2.7'
+          ruby-version: '3.0'
           bundler-cache: true
 
       - name: Install Dependencies
         run: |
-          gem install bundler -v '< 2.5'
+          gem install bundler
           bundle install
 
       - name: Setup Pages
