@@ -1,5 +1,5 @@
 # Mandatory settings
-
+encoding: utf-8
 blog_theme: light # Or use dark
 name: Chalk
 paginate: 25
