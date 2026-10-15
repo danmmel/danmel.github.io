@@ -75,6 +75,10 @@ exclude:
   - README.md
   - vendor/
   - yarn.lock
+  - _assets/
+  - node_modules/
+  - yarn.lock
+  - package.json
 plugins:
   - jekyll-assets
   - jekyll-paginate
@@ -82,3 +86,6 @@ plugins:
   - jemoji
 paginate_path: /posts/page/:num/
 permalink: posts/:slug
+
+
+exclude:
