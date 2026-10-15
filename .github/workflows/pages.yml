@@ -27,10 +27,10 @@ jobs:
           ruby-version: '2.7'
           bundler-cache: true
 
-      - name: Download missing frontend asset manually
+      - name: Create asset path and download zooming.min.js
         run: |
-          mkdir -p _assets/javascripts
-          curl -sSL https://cdn.jsdelivr.net/npm/zooming@2.1.1/build/zooming.min.js -o _assets/javascripts/zooming.min.js
+          mkdir -p _assets/yarn/zooming/build
+          curl -sSL https://cdn.jsdelivr.net/npm/zooming@2.1.1/build/zooming.min.js -o _assets/yarn/zooming/build/zooming.min.js
 
       - name: Install Ruby Dependencies
         run: |
