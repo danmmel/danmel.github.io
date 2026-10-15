@@ -28,15 +28,15 @@ jobs:
 
       - name: Install Bundler & Dependencies
         run: |
-          gem install bundler
-          bundle install --jobs 4 --retry 3
+          gem install bundler -v 2.4.22
+          bundle _2.4.22_ install --jobs 4 --retry 3
 
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
 
       - name: Build with Jekyll
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.pages_info.base_path }}"
+        run: bundle _2.4.22_ exec jekyll build --baseurl "${{ steps.pages.pages_info.base_path }}"
         env:
           JEKYLL_ENV: production
 
