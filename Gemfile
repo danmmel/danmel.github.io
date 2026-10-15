@@ -13,3 +13,4 @@ gem "sass"
 gem "sprockets", "~> 3.7"
 gem "uglifier"
 gem "rexml"
+gem 'jquery-rails'
