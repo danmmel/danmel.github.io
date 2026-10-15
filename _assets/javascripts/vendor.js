@@ -1,4 +1,4 @@
 //= require jquery.js
-//= require zooming.min.js
-//= require retina.js
-//= require svgxuse.js
+//= require zooming/build/zooming.min.js
+//= require retinajs/dist/retina.js
+//= require svgxuse/svgxuse.js

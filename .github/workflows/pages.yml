@@ -27,13 +27,16 @@ jobs:
           ruby-version: '2.7'
           bundler-cache: true
 
-      - name: Download all JS assets flatly
+      - name: Download assets with exact nested paths
         run: |
-          mkdir -p _assets/javascripts
+          mkdir -p _assets/javascripts/retinajs/dist
+          mkdir -p _assets/javascripts/zooming/build
+          mkdir -p _assets/javascripts/svgxuse
+
           curl -sSL https://code.jquery.com/jquery-3.7.1.min.js -o _assets/javascripts/jquery.js
-          curl -sSL https://cdn.jsdelivr.net/npm/zooming@2.1.1/build/zooming.min.js -o _assets/javascripts/zooming.min.js
-          curl -sSL https://cdn.jsdelivr.net/npm/retinajs@2.1.5/dist/retina.min.js -o _assets/javascripts/retina.js
-          curl -sSL https://cdn.jsdelivr.net/npm/svgxuse@1.2.6/svgxuse.js -o _assets/javascripts/svgxuse.js
+          curl -sSL https://cdn.jsdelivr.net/npm/zooming@2.1.1/build/zooming.min.js -o _assets/javascripts/zooming/build/zooming.min.js
+          curl -sSL https://cdn.jsdelivr.net/npm/retinajs@2.1.5/dist/retina.js -o _assets/javascripts/retinajs/dist/retina.js
+          curl -sSL https://cdn.jsdelivr.net/npm/svgxuse@1.2.6/svgxuse.js -o _assets/javascripts/svgxuse/svgxuse.js
 
       - name: Install Ruby Dependencies
         run: |
