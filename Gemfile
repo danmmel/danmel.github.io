@@ -15,4 +15,5 @@ gem "rexml"
 gem "csv"
 gem "forwardable-extended", ">= 2.6.0"
 gem "liquid-tag-parser", ">= 1.9.1"
+gem "kramdown-parser-gfm"
 gem 'jquery-rails'
