@@ -14,4 +14,5 @@ gem "sprockets", "~> 3.7"
 gem "uglifier"
 gem "rexml"
 gem "csv"
+gem "forwardable-extended", "~> 2.6.1"
 gem 'jquery-rails'
