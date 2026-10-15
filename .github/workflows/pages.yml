@@ -43,7 +43,7 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Build with Jekyll
-         run: bundle exec jekyll build --baseurl "${{ steps.pages.pages_info.base_path }}"
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.pages_info.base_path }}"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
